@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './global.scss';
 	import 'ol/ol.css';
 
 	import { onDestroy, onMount } from 'svelte';
@@ -14,6 +15,7 @@
 	import { light } from './protomaps-light';
 
 	import aifMap from './aif-map.png';
+	import Search from './Search.svelte';
 
 	let map: Map | undefined;
 	let mapElement: HTMLDivElement;
@@ -46,6 +48,7 @@
 			],
 			view: new View({
 				center: fromLonLat([(-117.84426 + -117.84117) / 2, (33.6472 + 33.64466) / 2]),
+				padding: [0, 0, 0, 384 + 8 + 8],
 				zoom: 18,
 				rotation: 2.5
 			})
@@ -58,12 +61,17 @@
 </script>
 
 <main>
+	<Search />
 	<div bind:this={mapElement} class="map" />
 </main>
 
 <style lang="scss">
 	:global(body) {
 		margin: 0;
+	}
+
+	:global(.ol-zoom) {
+		left: 384px + 8px + 8px;
 	}
 
 	main {

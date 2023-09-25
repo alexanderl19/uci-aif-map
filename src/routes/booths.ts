@@ -449,3 +449,20 @@ export const hobbiesAndInterests = [
 	{ name: 'We (Skin)Care at UCI', booth: 'H121' },
 	{ name: 'Yugioh Club at UCI', booth: 'H122' }
 ];
+
+export const booths = [
+	...religiousSndSpiritual,
+	...multicultural,
+	...creativeArts,
+	...academicsAndHonors,
+	...sororityAndFraternityLife,
+	...performanceAndEntertainment,
+	...clubSportsAndFitness,
+	...careerAndProfessional,
+	...communityService,
+	...peerSupport,
+	...healthAndWellness,
+	...environmental,
+	...political,
+	...hobbiesAndInterests
+];
