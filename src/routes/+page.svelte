@@ -22,7 +22,7 @@
 		const baseLayer = new VectorTile({
 			declutter: true,
 			source: new PMTilesVectorSource({
-				url: 'https://build.protomaps.com/20230925.pmtiles',
+				url: './6fc0106d-74c7-4cf7-9f78-06d473f7cc50.pmtiles',
 				attributions: ['© OpenStreetMap']
 			}),
 			style: null
